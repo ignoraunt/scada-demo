@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer type="module"></script>
+    <title>- - -</title>
+  </head>
+  <body>
+    <div id="js-backdrop" class="backdrop">
+      <span id="js-loader" class="backdrop-loader"></span>
+      <p id="js-subtitle" class="backdrop-subtitle">
+        Инициализация сервера (9)
+      </p>
+    </div>
+
+    <div id="js-ws-status" class="ws-status"></div>
+
+    <div id="js-query-debug-terminal" class="query-debug-terminal">
+      <input
+        id="js-query-debug-terminal-input"
+        class="query-debug-terminal-input"
+        type="text"
+        autocomplete="off"
+        value=""
+      />
+      <button
+        id="js-query-debug-terminal-button"
+        class="query-debug-terminal-button"
+        type="button"
+      >
+        send
+      </button>
+    </div>
+
+    <div class="main-wrapper">
+      <dialog class="modal-values">
+        <div class="dialog-padding-wrapper"></div>
+      </dialog>
+
+      <div class="main-page-layout">
+        <h1 id="main-header">- - -</h1>
+        <div class="main-page-layout-block main-page-outer-left">
+          <div class="subheadings">
+            <p>- - -</p>
+            <p>- - -</p>
+          </div>
+
+          <div class="main-page-block">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-800013"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Биение <br />вала</p>
+              <div
+                id="main-page-id-800113"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div id="main-page-id-800014" class="main-page-value">&nbsp;</div>
+              <p>Зазор</p>
+              <div id="main-page-id-800114" class="main-page-value">&nbsp;</div>
+            </div>
+          </div>
+
+          <div class="main-page-block">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-800235"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Проседание</p>
+              <div
+                id="main-page-id-800335"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div id="main-page-id-800214" class="main-page-value">&nbsp;</div>
+              <p>Зазор</p>
+              <div id="main-page-id-800314" class="main-page-value">&nbsp;</div>
+            </div>
+          </div>
+
+          <div class="main-page-block">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-801013"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Биение <br />вала</p>
+              <div
+                id="main-page-id-801113"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div id="main-page-id-801014" class="main-page-value">&nbsp;</div>
+              <p>Зазор</p>
+              <div id="main-page-id-801114" class="main-page-value">&nbsp;</div>
+            </div>
+          </div>
+
+          <div class="main-page-block">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-801213"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Биение <br />вала</p>
+              <div
+                id="main-page-id-801313"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div id="main-page-id-801214" class="main-page-value">&nbsp;</div>
+              <p>Зазор</p>
+              <div id="main-page-id-801314" class="main-page-value">&nbsp;</div>
+            </div>
+          </div>
+
+          <div class="main-page-block">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-700023"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Верх</p>
+              <div
+                id="main-page-id-700223"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-700123"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Низ</p>
+              <div
+                id="main-page-id-700323"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-page-layout-block">
+          <div class="main-page-block main-page-block--revs">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div id="main-page-id-600000" class="main-page-value">&nbsp;</div>
+            </div>
+          </div>
+
+          <div id="js-image-wrapper-map-side" class="image-wrapper">
+            <img
+              class="main-image"
+              src="/img/main-image-f.png"
+              width="913"
+              height="1160"
+              alt="#"
+              usemap="#map-side"
+              draggable="false"
+            />
+          </div>
+          <div
+            id="js-image-wrapper-map-top"
+            class="image-wrapper image-wrapper-map-top"
+          >
+            <img
+              src="/img/stator-f.png"
+              width="600"
+              height="577"
+              alt="#"
+              usemap="#map-top"
+              draggable="false"
+            />
+          </div>
+        </div>
+
+        <div class="main-page-layout-block main-page-inner-right">
+          <div class="subheadings">
+            <p>- - -</p>
+            <p>- - -</p>
+          </div>
+
+          <div class="main-page-block main-page-block--wider">
+            <p>- - -</p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-600013"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Верхний <br />генераторный <br />подшипник</p>
+              <div
+                id="main-page-id-600113"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-600213"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Опора <br />подпятника</p>
+              <div
+                id="main-page-id-600313"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-604013"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Корпус <br />турбинного <br />подшипника</p>
+              <div
+                id="main-page-id-604113"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-604213"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Крышка <br />турбины</p>
+              <div
+                id="main-page-id-604313"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-602034"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Корпус статора <br />(0,8–10 Гц)</p>
+              <div
+                id="main-page-id-602134"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+
+          <div class="subheadings">
+            <p>- - -</p>
+            <p>- - -</p>
+          </div>
+
+          <div class="main-page-block">
+            <p>
+              - - -<br />- - -
+            </p>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-601034"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Стык 1</p>
+              <div
+                id="main-page-id-601134"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-601234"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Стык 2</p>
+              <div
+                id="main-page-id-601334"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-602234"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Стык 3</p>
+              <div
+                id="main-page-id-602334"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-603034"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Стык 4</p>
+              <div
+                id="main-page-id-603134"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+            <div class="main-page-display">
+              <div
+                id="main-page-id-603234"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+              <p>Стык 5</p>
+              <div
+                id="main-page-id-603334"
+                class="main-page-value main-page-value-to-details"
+              >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+
+          <button class="transition-button" tabindex="-1">Графики</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-chart-wrapper">
+      <dialog class="dialog-templates-message"></dialog>
+
+      <dialog class="dialog-templates-menu">
+        <div class="dialog-padding-wrapper">
+          <span class="close-button close-button-templates"></span>
+          <h3>Шаблоны</h3>
+          <div class="dialog-list"></div>
+        </div>
+      </dialog>
+
+      <div class="template-wrapper">
+        <div class="template-buttons templates">
+          <button id="load-template" type="button" tabindex="-1">
+            Шаблоны
+          </button>
+          <button id="save-template" type="button" tabindex="-1">
+            Сохранить
+          </button>
+        </div>
+
+        <div class="template-items"></div>
+        <div class="template-buttons">
+          <button id="remove-all-template-items" type="button" tabindex="-1">
+            Очистить
+          </button>
+        </div>
+      </div>
+
+      <div class="filters-wrapper">
+        <form>
+          <label
+            >Агрегат<select id="AGREGATY" tabindex="-1" disabled></select
+          ></label>
+          <label
+            >Канал<select id="KANALY" tabindex="-1" disabled></select
+          ></label>
+          <label
+            >Замер<select id="ZAMERY" tabindex="-1" disabled>
+              <option value="0">Выберите замер:</option>
+            </select></label
+          >
+          <hr />
+          <label
+            >Усреднение<select id="filters-is-current" tabindex="-1" disabled>
+              <option value="0">Текущие (без усреднения)</option>
+              <option value="N">Минутное</option>
+              <option value="H">Часовое</option>
+              <option value="D">Дневное</option>
+            </select></label
+          >
+          <div class="filters-is-current-pickers">
+            <label class="inline"
+              >Начало<input
+                id="date-ante"
+                type="datetime-local"
+                value="2024-09-01T10:00"
+                tabindex="-1"
+                disabled
+            /></label>
+            <label class="inline"
+              >Окончание<input
+                id="date-post"
+                type="datetime-local"
+                value="2024-09-01T12:00"
+                tabindex="-1"
+                disabled
+            /></label>
+            <label class="inline"
+              ><select id="duration" tabindex="-1" disabled>
+                <option value="">За последние ...</option>
+                <option value="hour">Час</option>
+                <option value="eightHours">Восемь часов</option>
+                <option value="twelveHours">Двенадцать часов</option>
+                <option value="week">Неделя</option>
+                <option value="month">Месяц</option>
+              </select></label
+            >
+          </div>
+          <hr />
+          <button
+            id="js-add-item-button"
+            class="add-item-button"
+            type="button"
+            tabindex="-1"
+            disabled
+          >
+            Добавить/обновить данные
+          </button>
+        </form>
+      </div>
+
+      <div class="tools">
+        <button class="transition-button" tabindex="-1">Мнемосхема</button>
+
+        <select id="chart-divider" tabindex="-1">
+          <option value="single">На одной оси</option>
+          <option value="several">На разных осях</option>
+        </select>
+
+        <label class="timespanlabel"
+          >Длительность тренда, мин:
+          <input
+            id="timespan"
+            type="number"
+            min="1"
+            max="30"
+            value="5"
+            tabindex="-1"
+            disabled
+        /></label>
+
+        <select id="chart-mode" tabindex="-1">
+          <option value="trc">Тренды текущие</option>
+          <option value="tra">Тренды архивные</option>
+          <option value="si">Сигналы</option>
+          <option value="sp">Спектры</option>
+          <option value="vv">Орбиты</option>
+          <option value="vz">Воздушный зазор</option>
+          <option value="st">Статус</option>
+        </select>
+      </div>
+
+      <div
+        id="chart"
+        class="main-chart"
+        style="width: 100%; height: 100%"
+      ></div>
+    </div>
+
+    <map name="map-side">
+      <area
+        class="areas"
+        shape="circle"
+        coords="401,114"
+        data-legend="800013"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,114"
+        data-legend="800113"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="450,380"
+        data-legend="800235"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,380"
+        data-legend="800335"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="440,142"
+        data-legend="600013"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,142"
+        data-legend="600113"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="642,229"
+        data-legend="700023"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,229"
+        data-legend="700223"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="642,304"
+        data-legend="700123"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,304"
+        data-legend="700323"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="457,384"
+        data-legend="800213"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,384"
+        data-legend="800313"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="411,384"
+        data-legend="801013"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,384"
+        data-legend="801113"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="457,409"
+        data-legend="600213"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,409"
+        data-legend="600313"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="408,750"
+        data-legend="801213"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,750"
+        data-legend="801313"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="451,790"
+        data-legend="604213"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,790"
+        data-legend="604313"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="675,270"
+        data-legend="602034"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,270"
+        data-legend="602134"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="416,820"
+        data-legend="604013"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="362,820"
+        data-legend="604113"
+      />
+    </map>
+    <map name="map-top">
+      <area
+        class="areas"
+        shape="circle"
+        coords="486,289"
+        data-legend="601034"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="486,269"
+        data-legend="601134"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="340,473"
+        data-legend="601234"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="360,467"
+        data-legend="601334"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="135,406"
+        data-legend="602334"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="123,389"
+        data-legend="602234"
+      />
+
+      <area
+        class="areas"
+        shape="circle"
+        coords="135,156"
+        data-legend="603034"
+      />
+      <area
+        class="areas"
+        shape="circle"
+        coords="123,173"
+        data-legend="603134"
+      />
+
+      <area class="areas" shape="circle" coords="361,95" data-legend="603234" />
+      <area class="areas" shape="circle" coords="341,90" data-legend="603334" />
+    </map>
+  </body>
+</html>
